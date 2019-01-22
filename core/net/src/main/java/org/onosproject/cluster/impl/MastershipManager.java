@@ -329,8 +329,8 @@ public class MastershipManager
         // Now re-distribute the orphaned devices into buckets until they are roughly even.
         while (!orphanedDevices.isEmpty()) {
             // Iterate over the buckets and find the smallest bucket.
-            ControllerNode smallest = findBucket(true, controllerDevices);
-            changeMastership(smallest, controllerDevices.get(smallest),
+            ControllerNode largest = findBucket(false, controllerDevices);
+            changeMastership(largest, controllerDevices.get(largest),
                              orphanedDevices, 1, futures);
         }
     }
