@@ -49,6 +49,7 @@ public class RoleInfo {
     }
 
     public List<NodeId> backups() {
+        List<NodeId> backups = new ArrayList();
         Collections.sort(backups);
         return backups;
     }
