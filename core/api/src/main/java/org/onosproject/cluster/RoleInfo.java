@@ -23,6 +23,7 @@ import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 
 import java.util.Collections;
+import java.util.ArrayList;
 
 /**
  * An immutable container for role information for a device,
