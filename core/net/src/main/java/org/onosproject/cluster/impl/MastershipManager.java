@@ -169,14 +169,18 @@ public class MastershipManager
         checkNotNull(role, ROLE_NULL);
 
         CompletableFuture<MastershipEvent> eventFuture = null;
-
+        String notreChoix = "172.17.0.7";
         switch (role) {
             case MASTER:
                 eventFuture = store.setMaster(nodeId, deviceId);
                 break;
             case STANDBY:
+                if (NodeId.id == notreChoix){
                 eventFuture = store.setStandby(nodeId, deviceId);
+                }
+                else {
                 break;
+                }
             case NONE:
                 eventFuture = store.relinquishRole(nodeId, deviceId);
                 break;
