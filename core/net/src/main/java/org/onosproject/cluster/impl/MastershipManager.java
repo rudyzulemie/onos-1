@@ -178,8 +178,11 @@ public class MastershipManager
             case STANDBY:
                 if (b) {
                 eventFuture = store.setStandby(nodeId, deviceId);
-                        break;
-				}
+		}
+		else {
+			relinquishRole(nodeId, deviceId);
+		}
+		break;
             case NONE:
                 eventFuture = store.relinquishRole(nodeId, deviceId);
                 break;
