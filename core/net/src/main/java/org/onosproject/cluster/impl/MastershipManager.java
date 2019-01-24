@@ -180,10 +180,6 @@ public class MastershipManager
                 eventFuture = store.setStandby(nodeId, deviceId);
                         break;
 				}
-				else {
-                break;
-				}
-                        break;
             case NONE:
                 eventFuture = store.relinquishRole(nodeId, deviceId);
                 break;
