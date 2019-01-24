@@ -22,9 +22,9 @@ import java.util.Optional;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 
-import java.util.Collections;
+/*import java.util.Collections;
 import java.util.ArrayList;
-
+*/
 /**
  * An immutable container for role information for a device,
  * within the current cluster. Role attributes include current
@@ -50,8 +50,8 @@ public class RoleInfo {
     }
 
     public List<NodeId> backups() {
-        List<NodeId> backups = new ArrayList();
-        Collections.sort(backups);
+        /*List<NodeId> backups = new ArrayList();
+        Collections.sort(backups);*/
         return backups;
     }
 
