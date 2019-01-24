@@ -169,14 +169,14 @@ public class MastershipManager
         checkNotNull(role, ROLE_NULL);
 
         CompletableFuture<MastershipEvent> eventFuture = null;
-        String notreChoix = "172.17.0.7" ;
-            
+        NodeId notreChoix = new NodeId("172.17.0.7");
+        Boolean b = (notreChoix.compareTo(nodeId) == 1) ? true : false ;     
         switch (role) {
             case MASTER:
                 eventFuture = store.setMaster(nodeId, deviceId);
                 break;
             case STANDBY:
-                if ( NodeId.id == notreChoix) {
+                if (b) {
                 eventFuture = store.setStandby(nodeId, deviceId);
                         break;
 				}
